@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="import" href="component.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniloka</title>
+    <link rel="shortcut icon" href="img/rsz_1furnilloka_1.jpg" type="image/x-icon">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script> 
+
+    <!--my style-->
+    <link rel="stylesheet" href="css/styles.css">
+<body>
+
+    <!--navarbar awal-->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Furni<span>Loka</span></a>
+        <div class="navbar-nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang kita</a>
+        <a href="#design">Design</a>
+        <a href="#checkdiscount">Check-Discount</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" id="products">Products</button> 
+        <div class="dropdown-content">
+            <a href="addcart.html" onclick="scrollToSection('Furniture')">Furniture</a>
+            <a href="checkout.html" onclick="scrollToSection('Keranjang')">Keranjang</a>
+        </div> 
+    </div>
+    <div class="navbar-extra">
+        <a href="addcart.html" id="search-icon"><i data-feather="search"></i></a>
+        <input type="text" placeholder="Search..." id="search-input">
+           
+            <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+            </div>
+        </div>
+    </nav>
+    <!--navarbar akhir-->
+    
+    <!--hero section awal-->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari bangun rumah impian kalian di Furni<span>Loka.</span></h1>
+            <p>Kami hadir untuk mewujudkan rumah impian Anda dengan furnitur berkualitas dan desain yang estetis.</p>
+        </main>
+    </section>
+    <!--hero section akhir-->
+    
+    <!--section awal-->
+    
+    <section class="about" id="about">
+        <h1 class="heading"><span> Tentang </span> Kita </h1>
+        
+        <div class="row">
+            
+            <div class="video-container">
+                <video src="img/ruang tamu.mp4" loop autoplay muted></video>
+                <h3>Design ruang tamu terbaik</h3>
+            </div>
+            
+            <div class="content">
+                <h3>Kenapa harus kita untuk pilihan terbaik ?</h3>
+                <p>Karena produk dan desain kami sangat premium, dengan kualitas yang terjamin.</p>
+                <p>Setiap detail kami perhatikan, kami berkomitmen membarikan yang terbaik. </p>
+                <a href="" class="cta">Learn more</a>
+            </div>
+            
+        </div>
+    </section>
+    <!--section akhir-->
+    
+    <!--section icon awal-->
+    <section class="icons-container">
+        
+        <div class="icons">
+            <img src="img/car.png" alt="car">
+            <div class="info">
+                <h3>Gratis pengantaran</h3>
+                <span>Di semua pembelian</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="img/money.png" alt="car">
+            <div class="info">
+                <h3>2 hari return</h3>
+                <span>Garansi pegembalian barang dan uang</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="img/free and givve.png" alt="car">
+            <div class="info">
+                <h3>Menawarkan & Memberikan</h3>
+                <span>Di semua pembelian</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="img/pembayaran aman.png" alt="car">
+            <div class="info">
+                <h3>Pembayaran aman</h3>
+                <span>Melalu apapun</span>
+            </div>
+        </div>
+    </section>
+    <!--section icon akhir-->
+    
+    
+
+
+<!--section design-->
+
+    <section class="design" id="design">
+        <h2>Design<span>  kita</span></h2>
+        <p>Silahkan kalian pilih design terbaik dari kami, yang anda ingin pesan untuk keperluan struktur bangunan anda mulai dari design sederhana sampai modern.</p>
+        <div class="row">
+            <div class="barang-card">
+                <img src="img/rumah 1.jpg" alt="kursi mewah" class="barang-card-img">
+                <h3 class="barang-card-title">- Design -</h3>
+                <p class="barang-card-price">$5000 </p>
+            </div>
+            <div class="barang-card">
+                <img src="img/rumah 2.jpeg" alt="kursi mewah" class="barang-card-img">
+                <h3 class="barang-card-title">- Design -</h3>
+                <p class="barang-card-price">$4600 </p>
+            </div>
+            <div class="barang-card">
+                <img src="img/rumah3.jpeg" alt="kursi mewah" class="barang-card-img">
+                <h3 class="barang-card-title">- Design -</h3>
+                <p class="barang-card-price">$1000 </p>
+            </div>
+            <div class="barang-card">
+                <img src="img/rumah 2.jpeg" alt="kursi mewah" class="barang-card-img">
+                <h3 class="barang-card-title">- Design -</h3>
+                <p class="barang-card-price">$2400 </p>
+            </div>
+            <div class="barang-card">
+                <img src="img/rumah 1.jpg" alt="kursi mewah" class="barang-card-img">
+                <h3 class="barang-card-title">- Deisgn -</h3>
+                <p class="barang-card-price">$5400 </p>
+            </div>
+    </section>
+    
+    
+    
+    <!-- Check Discount Section Start -->
+    <section class="checkdiscount" id="checkdiscount">
+        <h1 class="heading">Furni<span>Loka</span> Discount</h1>
+        <div class="container">
+            <h1><span>Check-discount</span></h1>
+            <div class="checkout-cart">
+                <h1>Checkout Cart</h1>
+                <div class="cart" id="cart"></div>
+                <button type="button" id="addItem">Add Item</button>
+                <button type="button" id="calculate">Calculate Total</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--section kontak-->
+    <section class="kontak" id="kontak">
+            <h2> Kontak <span> Kami</span></h2>
+            <p>Jika ingin mengetahu lebih hubungi kami</p>
+            
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.2909227377486!2d107.6622084666861!3d-6.940473999999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e81c148d2b49%3A0x89c658910e50b742!2sSMK%20MedikaCom%20Bandung!5e0!3m2!1sid!2sid!4v1731398953877!5m2!1sid!2sid"  allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                
+                <form action="">
+                    <div class="input-group">
+                        <i data-feather="users"></i>
+                        <input type="text" placeholder="name">
+                    </div>
+                </form>
+                <form action="">
+                    <div class="input-group">
+                        <i data-feather="mail"></i>
+                        <input type="text" placeholder="@email">
+                    </div>
+                </form>
+                <form action="">
+                    <div class="input-group">
+                        <i data-feather="smartphone"></i>
+                        <input type="text" placeholder="number">
+                        </div>
+                    <button type="submit" class="btn">Send message</button>
+                </form>
+            </div>
+    </section>
+
+
+    <script>
+        feather.replace();
+      </script>
+
+      <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,773 @@
+:root{
+    --blue: #0ba9ac;
+    --bg: #eee;
+    --texrt: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--texrt);
+}   
+
+/*navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(3, 3, 3, 0.5);
+    border-bottom: 1px solid #085253;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic  ;
+}
+
+.navbar .navbar-logo span {
+    color: var(--blue);
+    font-style: italic;
+}   
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--blue);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--blue);
+    transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+/* Container navbar */
+.navbar-extra {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #088d8e, #085253);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Elemen dalam navbar */
+.navbar-extra a {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: var(--texrt);
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-extra a:hover {
+    color: var(--blue);
+}
+
+.navbar-extra a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--blue);
+    transform: scaleX(0);
+    transition: transform 0.5s linear;
+}
+
+.navbar-extra a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* Input pencarian dalam navbar */
+.navbar-extra input {
+    width: 0;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    background: transparent;
+    color: var(--texrt);
+    transition: width 0.5s ease;
+}
+
+.navbar-extra input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-extra:hover input {
+    width: 200px;
+}
+
+#menu {
+    display: none;
+}
+/* icon keranjang */
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.icon-cart{
+    position: relative;
+}
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -20px;
+}
+
+/* dropdwon */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: var(--blue);
+    color: var(--texrt);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--blue);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    min-width: 160px;
+} 
+.dropdown-content a {
+    color: var(--texrt);
+    padding: 12px 16px; 
+    text-decoration: none;
+    display: block;
+} 
+.dropdown-content a:hover {
+    background-color: #eee;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+ }
+ .dropdown:hover .dropdown-content {
+    display: block;
+} 
+.dropdown:hover .dropbtn {
+    background-color: var(--blue);
+}
+
+/* hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/bg\ bernada.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+} 
+
+.hero .content h1 span {
+    color: var(--blue);
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: #fff;
+    line-height: 1.4;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--blue);
+    font-style: italic;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(1, 1, 3, 0.5);
+
+}
+
+.heading span {
+    color: #fff;
+    font-style: italic;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(1, 1, 3, 0.5);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 2rem;
+    background: #fff;
+    color: var(--bg);
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem;
+    padding-top: 1rem;
+    line-height: 1;
+}
+
+.about .row .cta{
+    flex: 1 1 40rem;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.icons-container {
+    background-color: var(--blue);
+    box-shadow: 0px 0px 1px #010101;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    max-width: 300px;
+} 
+
+.icons img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.info span {
+    font-size: 0.9rem;
+    color: #fffafa; 
+}
+
+/* Gaya untuk elemen produk */
+/* Gaya untuk elemen produk */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-icon a {
+    color: #4A5FF7;
+    cursor: pointer;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-content h3 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.product-star i {
+    color: #FFD700;
+    margin-right: 2px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-price .strikethrough {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+
+
+
+.design h2, .products h2, .kontak h2 {
+    font-size: 3em;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-align: center; 
+    color: var(--blue);
+    font-style: italic;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(1, 1, 3, 0.5);
+} 
+
+.design h2 span, .products h2 span, .kontak h2 span {
+    color: #fff;
+    font-style: italic;
+}
+
+.design p, .products p, .kontak p {
+    margin-bottom: .5rem;
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.design .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.design .row .barang-card {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.design .row .barang-card img {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.design .row .barang-card .barang-card-title {
+    margin: 1rem auto 0.5rem;
+}
+
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #0ba9ac;
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+}
+
+.kontak .row .map {
+    flex: 1 1 50%;
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.5); 
+}
+
+.kontak .row form {
+    display: flex; 
+    flex-direction: column;
+    flex: 1 1 45%;
+    padding: 2rem; 
+    text-align: left; 
+    background-color: var(--blue); 
+    color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.5); 
+    margin-left: 1rem; 
+}
+
+.checkdiscount {
+    padding: 20px;
+    background-color: var(--bg);
+}
+
+.checkdiscount .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkdiscount .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.checkdiscount .checkout-cart h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cart {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #0ba9ac;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #088d8e;
+}
+    
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+/* media */
+
+/*laptop*/
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+
+    .product-card {
+        width: 45%; 
+    }
+
+}
+/* tab */
+@media (max-width: 768px){
+    html {
+        font-size: 62.5%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+    
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #979393;
+        width: 30rem;
+        height: 100vh;
+        transition: .3s;
+    }
+
+    .navbar .navbar-nav.active {
+            right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover:after {
+        transform: scaleX(0.2);
+    }
+
+    .barang p{
+        font-size: 1.2rem;
+    }
+
+    .product-card {
+        width: 100%; 
+        margin: 1rem 0; 
+    }
+
+    .navbar-extra {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    } .navbar-extra a, .navbar-extra input {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-extra:hover input {
+        width: calc(100% - 20px);
+    }
+    
+}
+/* phone */
+@media (max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    .barang p{
+        font-size: 1.2rem;
+    }
+
+    .navbar-extra {
+        max-width: 100%;
+        padding: 5px;
+        flex-direction: column;
+    }
+    .navbar-extra a, .navbar-extra input {
+        margin: 5px 0;
+        width: 100%;
+    } 
+    .navbar-extra:hover input {
+        width: calc(100% - 20px);
+    }
+}
+
+.container {
+    margin: auto;
+    padding: 5%;
+    width: 50%;
+    background-color: #085253;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.2s;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+    margin-top: 60px;
+}
+
+.container:hover {
+    transform: scale(1.05); 
+}
+
+body .container h1 {
+    color: #fff;
+    text-align: center;
+}
+
+body .contaier h1, span {
+    color: var(--blue);
+    text-align: center;
+}
+
+#result {
+    color: var(--blue);
+    background-color: #ffefef;
+    border-radius: 10px;
+    padding: 1rem; 
+    border: 2px solid #fff; 
+    margin-top: 1rem; 
+
+}
+
+button {
+    padding: 0.5rem 1rem;   
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.2s; 
+    box-shadow: #595858;
+    align-items: center;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--blue); 
+    transform: scale(1.05); 
+}
+
+form div {
+    margin: 25px 0;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: rgb(152, 162, 162);
+    color: var(--bg);
+    font-weight: 600;
+}
+
+select option{
+    color: #fff9f9;
+    font-weight: 700;
+}
+
+.cart .item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}

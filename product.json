@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Stove",
+        "price": 520,
+        "image": "img/kitcchen/stove 2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Stove",
+        "price": 220,
+        "image": "img/kitcchen/stove 3.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Stove",
+        "price": 250,
+        "image": "img/kitcchen/s1.png"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Freezer",
+        "price": 420,
+        "image": "img/kitcchen/kulkas 2.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Freezer",
+        "price": 120,
+        "image": "img/kitcchen/kulkas 2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Freezer",
+        "price": 120,
+        "image": "img/kitcchen/kulkas3.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Bed",
+        "price": 520,
+        "image": "img/bedroom/kasur1.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Bed",
+        "price": 520,
+        "image": "img/bedroom/kasur2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Bed",
+        "price": 420,
+        "image": "img/bedroom/kasur3.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Bed",
+        "price": 520,
+        "image": "img/bedroom/bed room.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Table",
+        "price": 220,
+        "image": "img/bedroom/meja rias 1.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Living room",
+        "price": 250,
+        "image": "img/ruang tamu/livinng room.jpg"
+    }
+    ,
+    {
+        "id": 13,
+        "name": "Freezer",
+        "price": 420,
+        "image": "img/bedroom/sofa 1.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Freezer",
+        "price": 120,
+        "image": "img/kitcchen/kulkas 2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Freezer",
+        "price": 120,
+        "image": "img/kitcchen/kulkas3.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Bed",
+        "price": 520,
+        "image": "img/bedroom/kasur1.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Bed",
+        "price": 520,
+        "image": "img/bedroom/kasur2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Bed",
+        "price": 420,
+        "image": "img/bedroom/kasur3.jpg"
+    }
+]

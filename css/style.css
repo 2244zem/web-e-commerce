@@ -1,0 +1,40 @@
+.navbar-extra a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px; /* Membuat sudut kiri bulat */
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #0ba9ac;
+    color: #fff;
+    border-radius: 0 20px 20px 0; /* Membuat sudut kanan bulat */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #088d8e;
+}
+
+
+.navbar .navbar-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--blue);
+    transition: 0.2s linear;
+}
